@@ -14,6 +14,8 @@ const tourSchema = new Schema({
     userid:{ type: String, required: true, unique: false},
     is_seasonal:{ type: Boolean, required: true, unique: false},
     status:{ type: Boolean, required: true, unique: false},
+    web:{ type: Boolean, required: true, unique: false},
+    brouchure:{ type: Boolean, required: true, unique: false},
 },{
     timestamps:true,
 });

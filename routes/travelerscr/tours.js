@@ -21,6 +21,8 @@ router.route('/add').post((req, res)=>{
     const userid = req.body.userid;
     const is_seasonal = req.body.is_seasonal;
     const status = req.body.status;
+    const web = req.body.web;
+    const brouchure = req.body.brouchure;
 
     const newTours = new Tours({
         code,
@@ -36,6 +38,8 @@ router.route('/add').post((req, res)=>{
         userid,
         is_seasonal,
         status,
+        web,
+        brouchure,
     });
 
     newTours.save()
