@@ -22,10 +22,14 @@ connection.once('open', ()=>{
 
 }); 
 
+
+// travelerscr.com
+    // Components
+    const travelerscrTours = require('./routes/travelerscr/tours');
+    // Routes
+    app.use('/api/travelerscr/tours/', travelerscrTours);
+
 const home = require('./view/home');
-
-
-
 const exerciseRouter = require('./routes/exercise');
 const userRouter = require('./routes/user');
 const settingsRouter = require('./routes/settings');
@@ -34,11 +38,7 @@ const settingsRouter = require('./routes/settings');
 app.use('/', home);
 
 
-// travelerscr.com
-    // Components
-    const travelerscrTours = require('./routes/travelerscr/tours');
-    // Routes
-    app.use('/api/travelerscr/tours/', travelerscrTours);
+
 
 
 

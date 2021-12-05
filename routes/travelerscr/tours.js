@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Settings = require('../model/travelerscr/tour.model');
+let Settings = require('../model/travelerscr/tours.model');
 
 router.route('/').get((req, res)=>{
     Settings.find()
