@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 const tourSchema = new Schema({
     code:{ type: String, required: true, unique: true, trim: true },
     name:{ type: String, required: true, unique: true, trim: true },
-    price_sale_without_discount:{ type: String, required: true, unique: false},
-    price_sale_with_discount:{ type: String, required: true, unique: false},
+    price_sale_without_discount:{ type: Number, required: true, unique: false},
+    price_sale_with_discount:{ type: Number, required: true, unique: false},
     price_brochoure_rack:{ type: Number, required: true, unique: false},
     price_brochoure_neto:{ type: Number, required: true, unique: false},
     price_brochoure_comission:{ type: Number, required: true, unique: false},
