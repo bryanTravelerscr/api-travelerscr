@@ -1,9 +1,9 @@
 const router = require('express').Router();
-let Settings = require('../model/travelerscr/tours.model');
+let Tours = require('../model/travelerscr/tours.model');
 
 router.route('/').get((req, res)=>{
-    Settings.find()
-        .then(settings => res.json(settings))
+    Tours.find()
+        .then(tours => res.json(tours))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -22,7 +22,7 @@ router.route('/add').post((req, res)=>{
     const is_seasonal = req.body.is_seasonal;
     const status = req.body.status;
 
-    const newSettings = new Settings({
+    const newTours = new Tours({
         code,
         name,
         price_sale_without_discount,
@@ -38,7 +38,7 @@ router.route('/add').post((req, res)=>{
         status,
     });
 
-    newSettings.save()
+    newTours.save()
         .then(()=> res.json('Tour added!'))
         .catch(err=>res.status(400).json('Error: '  + err));
 });
