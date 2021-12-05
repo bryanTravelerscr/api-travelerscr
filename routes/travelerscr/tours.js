@@ -47,4 +47,10 @@ router.route('/add').post((req, res)=>{
         .catch(err=>res.status(400).json('Error: '  + err));
 });
 
+router.route('/:id').delete((req, res)=>{
+    Tours.findByIdAndDelete(req.params.id)
+        .then(() => res.json('Tour deleted!'))
+        .catch(err=>res.status(400).json('Error: '  + err));
+});
+
 module.exports = router;
