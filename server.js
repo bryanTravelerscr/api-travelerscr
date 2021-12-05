@@ -22,13 +22,14 @@ connection.once('open', ()=>{
 
 }); 
 
+const home = require('./view/home');
+
 const exerciseRouter = require('./routes/exercise');
 const userRouter = require('./routes/user');
 const settingsRouter = require('./routes/settings');
 
-app.use('/', ()=>{
-    return "Hi";
-});
+
+app.use('/', home);
 app.use('/exercise', exerciseRouter);
 app.use('/user', userRouter);
 app.use('/settings', settingsRouter);
