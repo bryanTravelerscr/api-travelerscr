@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Tours = require('../model/travelerscr/tours.model');
+let Tours = require('../../model/travelerscr/tours.model');
 
 router.route('/').get((req, res)=>{
     Tours.find()
